@@ -6,4 +6,7 @@ module.exports = {
   USER_NOT_FOUND: 'User not found.',
   USER_EXISTS: 'User already exists.',
   INVALID_PASSWORD: 'Password does not match.',
+  ACCESS_DENIED: 'Access denied',
+
+  STUDENT_NOT_FOUND: 'Student not found',
 };

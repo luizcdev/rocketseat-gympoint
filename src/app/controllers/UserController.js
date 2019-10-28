@@ -1,6 +1,5 @@
 import * as Yup from 'yup';
 import httpCode from 'http-status-codes';
-import authConfig from '../../config/auth';
 import User from '../models/User';
 import errorMessage from '../messages/error';
 
@@ -29,12 +28,12 @@ class UserController {
         .json({ error: errorMessage.USER_EXISTS });
     }
 
-    const { id, name, email, provider } = await User.create(req.body);
+    const { id, name, email, manager } = await User.create(req.body);
     return res.json({
       id,
       name,
       email,
-      provider,
+      manager,
     });
   }
 
@@ -76,14 +75,13 @@ class UserController {
         .json({ error: errorMessage.INVALID_PASSWORD });
     }
 
-    const { id, name, provider } = await user.update(req.body);
+    const { id, name, manager } = await user.update(req.body);
     return res.json({
       id,
       name,
-      provider,
+      manager,
     });
   }
 }
-
 
 export default new UserController();
