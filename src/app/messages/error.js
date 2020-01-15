@@ -9,4 +9,5 @@ module.exports = {
   ACCESS_DENIED: 'Access denied',
 
   STUDENT_NOT_FOUND: 'Student not found',
+  PLAN_NOT_FOUND: 'Plan not found',
 };
