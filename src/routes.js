@@ -18,9 +18,9 @@ routes.put('/users', UserController.update);
 routes.post('/students', managerMiddleware, StudentController.store);
 routes.put('/students', managerMiddleware, StudentController.update);
 
-routes.get('/plans', PlanController.index);
-routes.post('/plans', PlanController.store);
-routes.put('/plans', PlanController.update);
-routes.delete('/plans/:id', PlanController.delete);
+routes.get('/plans', managerMiddleware, PlanController.index);
+routes.post('/plans', managerMiddleware, PlanController.store);
+routes.put('/plans', managerMiddleware, PlanController.update);
+routes.delete('/plans/:id', managerMiddleware, PlanController.delete);
 
 export default routes;
